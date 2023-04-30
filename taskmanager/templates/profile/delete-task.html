@@ -1,0 +1,31 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+        <title> Quest Tracker - Delete Task</title>
+</head>
+
+{% include 'profile/base.html' %}
+<br>
+<div class="container bg-dark shadow-md p-5 form-layout">
+
+    <h3 class="text-center">DELETE A TASK</h3>
+
+     <br>
+    <form method="POST" autocomplete="off" >
+        {% csrf_token %}
+        <p class="text-center"> Are you sure you want to delete this task? </p>
+        <br>
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <br> <br>
+
+         <a class="btn btn-info navbar-btn" type="button" href="{% url 'view-tasks' %}">Go Back</a>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input class="btn btn-primary navbar-btn" type="submit" value="Delete Task"/>
+    </form>
+</div>
+</html>

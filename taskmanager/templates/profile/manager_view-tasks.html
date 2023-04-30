@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+       <title> Quest Tracker - View Task</title>
+    </head>
+
+{% include 'profile/manager_base.html' %}
+    <br>
+    <h3 class="text-center"> VIEW TASKS </h3>
+    <br>
+        {% for tsk in task %}
+        <div class="container bg-dark shadow-md p-5 form-layout" style="margin-top:20px">
+           <h3 class="text-center">{{ tsk.title }}</h3>
+            <br>
+           <h5 class="text-center">{{ tsk.content}}</h5>
+            <br> <br>
+
+
+&nbsp;    &nbsp;    &nbsp;    &nbsp; &nbsp; &nbsp; &nbsp;
+
+        </div>
+        <br>
+        {% endfor %}
+
+</html>
