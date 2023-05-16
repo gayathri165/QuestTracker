@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'taskmanagerapp',
     'crispy_forms' ,
+    'crispy_bootstrap4',
 ]
-
+CRISPY_ALLOWED_TEMPLATE_PACKS='boostrap4'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
