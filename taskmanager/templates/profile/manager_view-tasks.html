@@ -17,7 +17,17 @@
            <h3 class="text-center">{{ tsk.title }}</h3>
             <br>
            <h5 class="text-center">{{ tsk.content}}</h5>
+            <br>
+            <h5 class="text-center">{{ tsk.assigned_to}}</h5>
+            <br>
+               <h5 class="text-center">{{ tsk.assigned_by}}</h5>
+&nbsp;    &nbsp;    &nbsp;    &nbsp; &nbsp; &nbsp; &nbsp;
             <br> <br>
+            &nbsp;    &nbsp;    &nbsp;    &nbsp; &nbsp;
+             <a class="btn btn-info navbar-btn" type="button" href="{% url 'update-task' tsk.id %}">UPDATE TASK</a>
+            &nbsp;    &nbsp;    &nbsp;    &nbsp; &nbsp;    &nbsp; &nbsp;    &nbsp;    &nbsp;    &nbsp; &nbsp;
+&nbsp;    &nbsp;    &nbsp;
+             <a class="btn btn-info navbar-btn" type="button" href="{% url 'delete-task' tsk.id %}">DELETE TASK</a>
 
 
 &nbsp;    &nbsp;    &nbsp;    &nbsp; &nbsp; &nbsp; &nbsp;
